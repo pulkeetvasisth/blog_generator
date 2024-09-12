@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AI Blog Generator</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>AI-Powered Blog Generator</h1>
+      <form action="/generate" method="POST" class="form-container">
+        <div class="form-group">
+          <label for="prompt">Blog Topic:</label>
+          <input type="text" name="prompt" id="prompt" required />
+        </div>
+        <div class="form-group">
+          <label for="style">Writing Style:</label>
+          <select name="style" id="style" required>
+            <option value="formal">Formal</option>
+            <option value="casual">Casual</option>
+            <option value="technical">Technical</option>
+            <option value="research">Research</option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="language">Language:</label>
+            <input type="text" name="language" id="language" required />
+          </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn">Generate Blog</button>
+        </div>
+      </form>
+      <!-- Display the generated content -->
+      {% if text %}
+      <div>
+        {{ text|safe }}
+        <!-- Render the HTML content safely -->
+      </div>
+      {% endif %}
+    </div>
+  </body>
+  <script src="../static/index.js">
+    s
+  </script>
+</html>
